@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-item',
-  imports: [],
   templateUrl: './user-item.html',
   styleUrl: './user-item.css',
 })
-export class UserItem {
-  name: string; // <-- proprietà della classe
+export class UserItem implements OnInit {
+  @Input() name: string; // <-- proprietà della classe
 
   constructor() {
-    this.name = 'Felipe'; // <-- inizializzazione nel costruttore
+  }
+
+  ngOnInit() {
   }
 }
